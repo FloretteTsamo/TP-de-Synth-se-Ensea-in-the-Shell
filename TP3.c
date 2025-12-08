@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 		char buf[n];
 		int l=read(STDOUT_FILENO,buf,n);
 		buf[l-1]=*"\0";
-		if (strcmp(buf,"exit")==0){
+		if (strcmp(buf,"exit")==0 || l==0){
             write(STDOUT_FILENO,"Bye bye\n\r",8);
 			exit(EXIT_SUCCESS);}
 		if ((pid = fork()) ==-1){
@@ -30,4 +30,5 @@ int main(int argc, char **argv)
 		
 	return 0;
 }
+
 
