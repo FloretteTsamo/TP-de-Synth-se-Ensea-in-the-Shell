@@ -21,6 +21,7 @@ int main(int argc, char **argv)
 			exit(EXIT_FAILURE);}
 		else if (pid==0){
 			execlp(buf, buf, NULLPTR);
+			exit(EXIT_SUCCESS);
 			}
 		else{
 			sleep(1);
@@ -29,3 +30,4 @@ int main(int argc, char **argv)
 		
 	return 0;
 }
+
