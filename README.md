@@ -190,7 +190,7 @@ make clean
 
 ---
 
-## 📊 Bilan et perspectives
+##  Bilan et perspectives
 
 ### Ce qui fonctionne (Questions 1-4)
 - Affichage du message d'accueil et du prompt
@@ -215,14 +215,14 @@ Les prochaines séances permettront d'ajouter :
 
 ---
 
-## 📚 Références
+##  Références
 
 
 - Cours de Programmation Système - C. BARÈS, N. PAPAZOGLOU (ENSEA 2024)
 
 ---
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 enseash/
@@ -237,7 +237,7 @@ enseash/
 
 ---
 
-## 🤝 Répartition du travail
+##  Répartition du travail
 
 **Tom PICQUART** : Questions   
 **TSAMO Florette Miroslava** : Questions   
