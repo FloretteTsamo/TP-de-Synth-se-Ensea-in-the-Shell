@@ -114,8 +114,11 @@ Deux mécanismes de sortie sont implémentés :
 Dans les deux cas, un message `"Bye bye...\n"` est affiché avant la terminaison.
 
 ###  Résultat
-
+Sortie exit
 <img width="768" height="273" alt="image" src="https://github.com/user-attachments/assets/ec30b723-25a1-43d8-abd9-9ea5e02a6672" />
+Sortie Crtl+D
+<img width="757" height="292" alt="image" src="https://github.com/user-attachments/assets/11ead1c2-5842-4888-ae54-bcf303ef7101" />
+
 
 Le shell se termine proprement avec la commande `exit` ou avec `Ctrl+D`.
 
@@ -146,11 +149,9 @@ Voir le fichier [`question4.c`](TP4.c)
 Après chaque `wait(&status)`, on analyse `status` avec ces macros pour construire dynamiquement le prompt avec `snprintf()`.
 
 ###  Résultat
-Sortie exit
+
 <img width="1723" height="270" alt="image" src="https://github.com/user-attachments/assets/2cbe4be9-db40-40b4-820a-f14a0f96ea85" />
 
-Sortie Crtl+D
-<img width="757" height="292" alt="image" src="https://github.com/user-attachments/assets/11ead1c2-5842-4888-ae54-bcf303ef7101" />
 
 
 ###  Difficultés rencontrées
