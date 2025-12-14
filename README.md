@@ -104,7 +104,7 @@ Permettre à l'utilisateur de quitter le shell proprement via :
 - Le raccourci clavier `Ctrl+D` (EOF)
 
 ###  Mise en œuvre
-Voir le fichier [`question3.c`](TP3.c)
+Voir le fichier [`TP3.C`](TP3.c)
 
 Deux mécanismes de sortie sont implémentés :
 
@@ -145,7 +145,7 @@ Afficher dans le prompt le code de retour de la commande précédente :
 - `[sign:Y]` si terminaison par signal (où Y est le numéro du signal)
 
 ### Mise en œuvre
-Voir le fichier [`question4.c`](TP4.c)
+Voir le fichier [`TP4.C`](TP4.c)
 
 #### Concepts utilisés : Macros de `sys/wait.h`
 
