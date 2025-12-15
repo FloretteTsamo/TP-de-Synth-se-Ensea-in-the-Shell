@@ -30,10 +30,10 @@ int main(int argc, char **argv)
 			if (isspace(buf[i])){
 				// on s'assure de ne pas copier l'espace pour ne garder que les arguments
 				if (previous_space==0){
-					strncpy(args,buf+previous_space,i-previous_space);
+					strncpy(args[j],buf+previous_space,i-previous_space);
 					}
 				else{
-					strncpy(args,buf+previous_space+1,i-previous_space);
+					strncpy(args[j],buf+previous_space+1,i-previous_space);
 					}
 				previous_space=i;
 				args[j][i]=*"\0";
@@ -76,6 +76,7 @@ int main(int argc, char **argv)
 		}
 	return 0;
 }
+
 
 
 
