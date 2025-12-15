@@ -18,6 +18,7 @@ int main(int argc, char **argv)
 		int n= strlen(mess);
 		write(STDOUT_FILENO, mess,n);
 		char buf[n];
+		char ** argv;
 		int l=read(STDOUT_FILENO,buf,n);
 		buf[l-1]=*"\0";
 		clock_gettime( CLOCK_REALTIME, &start );
@@ -27,18 +28,16 @@ int main(int argc, char **argv)
 		int j=0;
 		for (int i=0; i<=l; i++){
 			if (isspace(buf[i])){
-				char temp[i+1];
-				// on s'assure de ne pas copier l'espace dans la temp pour ne garder que les arguments
+				// on s'assure de ne pas copier l'espace pour ne garder que les arguments
 				if (previous_space==0){
-					strncpy(temp,buf+previous_space,i-previous_space);
+					strncpy(args,buf+previous_space,i-previous_space);
 					}
 				else{
-					strncpy(temp,buf+previous_space+1,i-previous_space);
+					strncpy(args,buf+previous_space+1,i-previous_space);
 					}
 				previous_space=i;
+				args[j][i]=*"\0";
 				//on ajoute chaque argument à la liste des arguments
-				temp[i]=*"\0";
-				strcpy(args[j],temp);
 				j+=1;
 				}}
 		// on ajoute le dernier argument qui n'est pas copié dans la boucle
@@ -77,6 +76,8 @@ int main(int argc, char **argv)
 		}
 	return 0;
 }
+
+
 
 
 
