@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #define NULLPTR ((char *) NULL)
+#define BUFLEN 50
 int main(int argc, char **argv)
 {	pid_t pid;
 	int status;
@@ -28,12 +29,18 @@ int main(int argc, char **argv)
 		else{
 			wait(&status);
 			if (WIFEXITED(status)){
-				printf("code exit: %d \n\r",WEXITSTATUS(status));}
+				char buffer[BUFLEN];
+				sprintf(buffer,"code exit: %d \n\r",WEXITSTATUS(status));
+				n= strlen(buffer);
+				write(STDOUT_FILENO, buffer,n);}
 			else if (WIFSIGNALED(status)){
-				printf(" signal exit:%d \n\r",WTERMSIG(status));
-				}
+				char buffer[BUFLEN];
+				sprintf(buffer," signal exit:%d \n\r",WTERMSIG(status));
+				n= strlen(buffer);
+				write(STDOUT_FILENO, buffer,n);}
 			}
 		}
 		
 	return 0;
 }
+
