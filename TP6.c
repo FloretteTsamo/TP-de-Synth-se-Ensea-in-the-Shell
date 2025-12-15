@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 					strncpy(file,buf+previous_space+1,i-previous_space);
 					}
 				previous_space=i;
-				//on ajoute la chaque argument à la liste des arguments
+				//on ajoute chaque argument à la liste des arguments
 				file[i]=*"\0";
 				strcpy(args[j],file);
 				j+=1;
@@ -77,4 +77,5 @@ int main(int argc, char **argv)
 		}
 	return 0;
 }
+
 
