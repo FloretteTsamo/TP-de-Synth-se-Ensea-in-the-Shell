@@ -18,7 +18,6 @@ int main(int argc, char **argv)
 		int n= strlen(mess);
 		write(STDOUT_FILENO, mess,n);
 		char buf[n];
-		char ** argv;
 		int l=read(STDOUT_FILENO,buf,n);
 		buf[l-1]=*"\0";
 		clock_gettime( CLOCK_REALTIME, &start );
@@ -78,3 +77,4 @@ int main(int argc, char **argv)
 		}
 	return 0;
 }
+
