@@ -4,7 +4,7 @@
 #include <sys/wait.h>
 #include <stdlib.h>
 
-#define WELCOME_MSG "Bienvenue dans le Shell ENSEA.\nPour quitter, tapez 'exit ou entrez'.\n"
+#define WELCOME_MSG "Bienvenue dans le Shell ENSEA.\nPour quitter, tapez 'exit'.\n"
 #define PROMPT "enseash $ "
 #define BUFFER_SIZE 1024
 

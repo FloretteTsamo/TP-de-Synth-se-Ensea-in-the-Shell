@@ -42,7 +42,7 @@ int main() {
         } else if (pid == 0) {
             char *args[] = {buffer, NULL}; // tableau des commandes ls...
             execvp(buffer, args); // exécution des commandes
-            exit(EXIT_FAILURE);ls
+            exit(EXIT_FAILURE);
         } else {
             int status;
             wait(&status);
