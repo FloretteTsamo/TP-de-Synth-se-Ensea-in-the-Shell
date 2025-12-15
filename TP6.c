@@ -6,6 +6,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <ctype.h>
+#include <stdio.h>
 #define NULLPTR ((char *) NULL)
 #define BILLION  1000000000.0f
 #define BUFLEN 50
