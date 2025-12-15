@@ -27,18 +27,18 @@ int main(int argc, char **argv)
 		int j=0;
 		for (int i=0; i<=l; i++){
 			if (isspace(buf[i])){
-				char file[i+1];
-				// on s'assure de ne pas copier l'espace dans la file pour ne garder que les arguments
+				char temp[i+1];
+				// on s'assure de ne pas copier l'espace dans la temp pour ne garder que les arguments
 				if (previous_space==0){
-					strncpy(file,buf+previous_space,i-previous_space);
+					strncpy(temp,buf+previous_space,i-previous_space);
 					}
 				else{
-					strncpy(file,buf+previous_space+1,i-previous_space);
+					strncpy(temp,buf+previous_space+1,i-previous_space);
 					}
 				previous_space=i;
 				//on ajoute chaque argument à la liste des arguments
-				file[i]=*"\0";
-				strcpy(args[j],file);
+				temp[i]=*"\0";
+				strcpy(args[j],temp);
 				j+=1;
 				}}
 		// on ajoute le dernier argument qui n'est pas copié dans la boucle
@@ -77,5 +77,6 @@ int main(int argc, char **argv)
 		}
 	return 0;
 }
+
 
 
