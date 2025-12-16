@@ -161,12 +161,40 @@ Après chaque `wait(&status)`, on analyse `status` avec ces macros pour construi
 
 <img width="1723" height="270" alt="image" src="https://github.com/user-attachments/assets/2cbe4be9-db40-40b4-820a-f14a0f96ea85" />
 
+## Question 5 : Affichage du temps d'execution
+
+###  Objectif
+Afficher dans le prompt le  temps d'execution de la commande
+
+### Mise en œuvret
+Voir le fichier [`TP5.C`](TP5.c)
+
+#### Concepts utilisés : structure timespec
+
+- indication du temps de départ avec clock_gettime( CLOCK_REALTIME, &start );
+- indication du temps de fin avec clock_gettime( CLOCK_REALTIME, &stop );
+
+
+#### Principe
+le temps d'execution est obtenu par stop.tv_sec - start.tv_sec + ( stop.tv_nsec - start.tv_nsec ) / BILLION; (on a le temps en secondes et le nombre de nanosecondes par secondes
+Il est important d'indiquer que les valeurs sont des floats pour obtenir le temps en nanosecondes.
+
+
+## Question 6 : execution d'une commande complexe
+
+###  Objectif
+permettre l'execution de commandes avec plusieurs arguments
+
+
+### Mise en œuvret
+Voir le fichier [`TP6.C`](TP6.c)
+
+#### Principe
+On veut mettre les arguments dans une liste grâce aux espaces les séparant pour ensuite pouvoir les executer avec execvp.
 
 
 ###  Difficultés rencontrées
-- **Utilisation de `snprintf()`** : Nécessaire pour formater le prompt malgré l'interdiction de `printf()` 
-- **Distinction exit/signal** : Bien comprendre que `WIFEXITED` et `WIFSIGNALED` sont mutuellement exclusifs
-- **Taille du buffer** : Le prompt étant plus long, il faut augmenter la taille du buffer (`PROMPT_BUFFER_SIZE`)
+le code sépare correctement les arguments mais il semble y avoir un problème de type empêchant la bonne execution de execvp. Le code actuel utilise execlp qui ne peut qu'executer des commmandes sans arguments.
 
 ---
 
