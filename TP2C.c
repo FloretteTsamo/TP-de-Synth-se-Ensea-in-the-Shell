@@ -13,16 +13,21 @@ int main(int argc, char **argv)
 		write(STDOUT_FILENO, mess,n);
 		char buf[n];
 		int l=read(STDOUT_FILENO,buf,n);
+		// on modifie le dernier caractère de buf pour permettre l'exécution avec execlp
 		buf[l-1]=*"\0";
-		if ((pid = fork()) ==-1){
+		if ((pid = fork()) ==-1) //erreur
+		{
 			exit(EXIT_FAILURE);}
-		else if (pid==0){
+		else if (pid==0)//fils
+		{
 			execlp(buf, buf, NULLPTR);
 			}
-		else{
+		else // père
+		{
 			sleep(1);
 			}
 		}
 		
 	return 0;
 }
+
