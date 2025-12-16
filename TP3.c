@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 		char buf[n];
 		int l=read(STDOUT_FILENO,buf,n);
 		buf[l-1]=*"\0";
+		//on teste si le message est exit ou si la taille du message est nulle (ctrl+ d) auquel cas on envoie un message et on sort du shell
 		if (strcmp(buf,"exit")==0 || l==0){
             write(STDOUT_FILENO,"Bye bye\n\r",8);
 			exit(EXIT_SUCCESS);}
@@ -30,5 +31,6 @@ int main(int argc, char **argv)
 		
 	return 0;
 }
+
 
 
