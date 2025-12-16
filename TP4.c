@@ -30,6 +30,7 @@ int main(int argc, char **argv)
 			wait(&status);
 			if (WIFEXITED(status)){
 				char buffer[BUFLEN];
+				// on écrit le message souhaité dans buffer avec snprintf pour ne pas utiliser printf
 				sprintf(buffer,"code exit: %d \n\r",WEXITSTATUS(status));
 				n= strlen(buffer);
 				write(STDOUT_FILENO, buffer,n);}
@@ -43,4 +44,5 @@ int main(int argc, char **argv)
 		
 	return 0;
 }
+
 
