@@ -179,6 +179,10 @@ Voir le fichier [`TP5.C`](TP5.c)
 le temps d'execution est obtenu par stop.tv_sec - start.tv_sec + ( stop.tv_nsec - start.tv_nsec ) / BILLION; (on a le temps en secondes et le nombre de nanosecondes par secondes
 Il est important d'indiquer que les valeurs sont des floats pour obtenir le temps en nanosecondes.
 
+###  Résultat
+
+<img width="1723" height="270" alt="image" src="https://github.com/FloretteTsamo/TP-de-Synth-se-Ensea-in-the-Shell/blob/main/TP5.png?raw=true" />
+
 
 ## Question 6 : execution d'une commande complexe
 
