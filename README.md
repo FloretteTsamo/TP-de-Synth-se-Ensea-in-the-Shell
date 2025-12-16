@@ -252,7 +252,6 @@ make clean
 
 ###  Prochaines étapes (Questions 6-9)
 Les prochaines séances permettront d'ajouter :
-- **question 5** : Mesure du temps d'exécution
 - **Question 6** : Parsing des arguments de commandes (`ls -la`, `echo hello world`)
 - **Question 7** : Redirections d'entrées/sorties (`ls > file.txt`, `cat < input.txt`)
 - **Question 8** : Communication par pipes (`ls | wc -l`)
@@ -275,6 +274,8 @@ enseash/
 ├── question2.c         # Q2 : Exécution de commandes
 ├── question3.c         # Q3 : Gestion de exit et Ctrl+D
 ├── question4.c         # Q4 : Affichage des codes retour
+├── question5.c         # Q5 : Affichage des temps d'execution
+├── question6.c         # Q6 : Exécution de commandes complexes
 ├── 
 ├── Makefile           # Compilation
 └── README.md          # Ce rapport
@@ -290,5 +291,6 @@ enseash/
 
 ---
 
-**Date de dernière mise à jour :9 Décembre 2024  
+**Date de dernière mise à jour :16 Décembre 2024  
 **Statut :** Séance 1 terminée - Questions 1 à 4
+             Séance 5 terminée - correction de la question 4, Question 5, parties de la question 6
