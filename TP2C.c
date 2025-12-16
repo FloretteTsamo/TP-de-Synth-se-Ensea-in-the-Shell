@@ -7,6 +7,7 @@
 #define NULLPTR ((char *) NULL)
 int main(int argc, char **argv)
 {	pid_t pid;
+ 	int status;
 	while(1){
 		const char * mess = "$ ./enseash Bienvenue dans le Shell  ENSEA. Pour quitter, tapez 'exit'.enseash % \n\r";
 		int n= strlen(mess);
@@ -30,5 +31,6 @@ int main(int argc, char **argv)
 		
 	return 0;
 }
+
 
 
