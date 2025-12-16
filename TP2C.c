@@ -24,10 +24,11 @@ int main(int argc, char **argv)
 			}
 		else // père
 		{
-			sleep(1);
+			wait(&status);
 			}
 		}
 		
 	return 0;
 }
+
 
